@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411784001
 GameObject:
@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421693708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.83, y: 0.9942, z: 0}
+  m_LocalPosition: {x: -6.89, y: 0.9942, z: 0}
   m_LocalScale: {x: 1, y: 13.668322, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -449,13 +450,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 0.50992626, z: -10}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1838029258}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1521a81784169724d8121ff03da023f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 30
+  player: {fileID: 1838029255}
 --- !u!1 &702625462
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &702625463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1, y: 428}
+  m_AnchoredPosition: {x: 1, y: 211}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &828220296
@@ -751,7 +766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1838029255
 GameObject:
@@ -868,10 +883,9 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 519420032}
   - {fileID: 1877403036}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1838029259
 MonoBehaviour:
@@ -886,7 +900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveActionToUse: {fileID: 6389741398014966032, guid: a74dfd1ce75150a4eab8881c23645aed, type: 3}
-  speed: 25
+  speed: 50
+  rb: {fileID: 1838029261}
+  weapon: {fileID: 1877403038}
 --- !u!61 &1838029260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -944,6 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877403036}
   - component: {fileID: 1877403037}
+  - component: {fileID: 1877403038}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -965,7 +982,7 @@ Transform:
   m_Children:
   - {fileID: 411784002}
   m_Father: {fileID: 1838029258}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1877403037
 SpriteRenderer:
@@ -1019,3 +1036,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1877403038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877403035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552d042ae288b8f4ea23da4401ce8704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6753302225811975372, guid: 4e81b2a431ee77842a2ed521faffbcee, type: 3}
+  firePoint: {fileID: 411784002}
+  firePower: 20
