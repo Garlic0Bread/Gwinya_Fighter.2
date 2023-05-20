@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  colliderToIgnore: {fileID: 0}
 --- !u!50 &-8248389859984658498
 Rigidbody2D:
   serializedVersion: 4
