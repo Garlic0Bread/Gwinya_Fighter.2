@@ -7,11 +7,6 @@ public class Health : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private int maxhealth = 100;
 
-    void Update()
-    {
-        
-    }
-
     public void Damage(int amount)
     {
         if(amount < 0)
@@ -19,6 +14,7 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
         }
         this.health -= amount;
+        StartCoroutine(visualIndicator(Color.red));
 
         if(health < 0)
         {
@@ -34,8 +30,9 @@ public class Health : MonoBehaviour
         }
 
         bool wouldBeOverMaHealth = health + amount > maxhealth;
+        StartCoroutine(visualIndicator(Color.green));
 
-        if(wouldBeOverMaHealth)
+        if (wouldBeOverMaHealth)
         {
             this.health = maxhealth;
         }
@@ -49,5 +46,12 @@ public class Health : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    private IEnumerator visualIndicator (Color color)
+    {
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
