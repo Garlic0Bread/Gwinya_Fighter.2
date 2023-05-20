@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage = 5;
     [SerializeField] private float speed = 1.5f;
 
-    [SerializeField] private EnemyData data;
     private GameObject player;
 
     private void Start()
