@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float bulletSpeed = 10f; // Speed of the bullet
     [SerializeField] private float lockOnRange = 10f; // Range within which enemies can be locked onto
     [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
+    [SerializeField] private GameObject gamePlayCanvas;
+    [SerializeField] private GameObject gameShopCanvas;
+
+    private bool isShopOpen = false;
+    
 
     [SerializeField] private float nextFireTime; // Time of the next allowed fire
 
@@ -21,6 +26,24 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OpenGamePlayCanvas()
+    {
+        gamePlayCanvas.SetActive(true);
+        gameShopCanvas.SetActive(false);
+
+        Time.timeScale = 1f; //resumes gameplay
+        isShopOpen = true;
+    }
+
+    private void OpenGameStoreCanvas()
+    {
+        gamePlayCanvas.SetActive(false);
+        gameShopCanvas.SetActive(true);
+
+        Time.timeScale = 0f;
+        isShopOpen = false;
     }
 
     void Update()
@@ -46,7 +69,6 @@ public class Player : MonoBehaviour
 
                 if (Time.time >= nextFireTime)
                 {
-                    Debug.Log("Shooty");
                     // Fire a bullet
                     FireBullet();
                     // Set the time for the next allowed fire
@@ -96,5 +118,19 @@ public class Player : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Shop"))
+        {
+            OpenGameStoreCanvas();
+            Debug.Log("Shop Working");
+        }
+    }
+
+     void OnCollisionExit2D(Collision2D collision)
+    {
+        
     }
 }
