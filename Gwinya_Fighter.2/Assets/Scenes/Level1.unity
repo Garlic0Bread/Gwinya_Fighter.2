@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   spawnRadius: 20
   spawnDelay: 0.2
   playerTransform: {fileID: 1464071637}
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   spawnRadius: 20
   spawnDelay: 0.2
   playerTransform: {fileID: 1464071637}
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   spawnRadius: 17
   spawnDelay: 0.2
   playerTransform: {fileID: 1464071637}
@@ -3405,7 +3405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   spawnRadius: 20
   spawnDelay: 0.2
   playerTransform: {fileID: 1464071637}
@@ -5915,7 +5915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   spawnRadius: 20
   spawnDelay: 0.2
   playerTransform: {fileID: 1464071637}
