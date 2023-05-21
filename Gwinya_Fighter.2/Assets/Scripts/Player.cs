@@ -8,14 +8,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Joystick_Movement joystickMovement;
     [SerializeField] private float playerSpeed;
-    [SerializeField] private Health healthScript;
-
-    [SerializeField] private int health = 100;
-    [SerializeField] private int maxhealth = 100;
 
     [SerializeField] private Transform playerGun; // Reference to the player's gun transform
     [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
-    [SerializeField] private GameObject pinkyDeathPrefab; 
     [SerializeField] private float bulletSpeed = 10f; // Speed of the bullet
     [SerializeField] private float lockOnRange = 10f; // Range within which enemies can be locked onto
     [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
@@ -26,7 +21,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        healthScript = GetComponent<Health>();
     }
 
     void Update()
@@ -61,8 +55,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-  
 
     Transform GetClosestEnemy(GameObject[] enemies)
     {

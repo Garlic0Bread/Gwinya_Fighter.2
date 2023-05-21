@@ -6,10 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     [SerializeField] private int maxhealth = 100;
-    [SerializeField] private CoinManger coinManager;
     [SerializeField] private GameObject pinkyDeathVFX;
-    private GameObject deathPrefab;
-
 
     public void Damage(int amount)
     {
@@ -52,7 +49,11 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
         if (this.CompareTag("Enemy"))
         {
-            coinManager.AddCoins(1);
+            CoinManger coinManager = FindObjectOfType<CoinManger>();
+            if(coinManager !!= null)
+            {
+                coinManager.AddCoins(1);
+            }
             Instantiate(pinkyDeathVFX, transform.position, Quaternion.identity);
         }
     }
