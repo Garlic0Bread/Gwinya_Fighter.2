@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AwaitingDevelopment.unity
     guid: c9bd510fcba9caf42b8fc8d45f592311
+  - enabled: 1
+    path: Assets/Scenes/You lose.unity
+    guid: 54361d294ead9714387de55a511774bf
   m_configObjects: {}

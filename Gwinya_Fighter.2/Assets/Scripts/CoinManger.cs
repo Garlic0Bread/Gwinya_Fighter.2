@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class CoinManger : MonoBehaviour
 {
     public int playerCoins = 0; // The player's initial coin count
     public int gwinyaPrice = 10; // The price of each item in the store
     public int gwinyaAmount;
+
+    public TMP_Text numCoins;
+    public TMP_Text numGwinyas;
 
     // Function to buy an item
     public void BuyItem()
@@ -39,10 +44,13 @@ public class CoinManger : MonoBehaviour
 
     private void Update()
     {
-        if(gwinyaAmount == 3)
+        numCoins.text = playerCoins.ToString();
+        numGwinyas.text = gwinyaAmount.ToString();
+        if (gwinyaAmount == 3)
         {
             SceneManager.LoadScene(1);
         }
+        
     }
 }
 

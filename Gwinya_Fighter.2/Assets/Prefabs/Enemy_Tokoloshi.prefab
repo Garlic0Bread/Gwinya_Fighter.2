@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acc99a14a6d4ed459be24bba8b2cb10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   speed: 8
   lockOnRange: 15
 --- !u!114 &6218056677757532051
@@ -150,6 +150,7 @@ MonoBehaviour:
   health: 30
   maxhealth: 100
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
+  healthBar: {fileID: 0}
 --- !u!61 &6218056677757532050
 BoxCollider2D:
   m_ObjectHideFlags: 0
