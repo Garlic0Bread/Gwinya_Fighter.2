@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Joystick_Movement joystickMovement;
     [SerializeField] private float playerSpeed;
+    [SerializeField] private Health healthScript;
 
     [SerializeField] private int health = 100;
     [SerializeField] private int maxhealth = 100;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        healthScript = GetComponent<Health>();
     }
 
     void Update()
@@ -59,6 +61,8 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+  
 
     Transform GetClosestEnemy(GameObject[] enemies)
     {

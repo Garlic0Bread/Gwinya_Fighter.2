@@ -131,8 +131,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -189,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -208,8 +212,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -266,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -386,6 +394,54 @@ Transform:
   m_Father: {fileID: 878159751}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &97908797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97908798}
+  - component: {fileID: 97908799}
+  m_Layer: 0
+  m_Name: SpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97908798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97908797}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.1, y: 15, z: 0.15110302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1203811599}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97908799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97908797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  spawnRadius: 20
+  spawnDelay: 0.2
+  playerTransform: {fileID: 1464071637}
 --- !u!4 &102419229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5576851527620624283, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
@@ -488,8 +544,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -546,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -821,8 +881,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -879,7 +943,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -1667,8 +1731,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -1725,7 +1793,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -1828,8 +1896,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -1886,7 +1958,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -1902,6 +1974,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5576851527620624283, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
   m_PrefabInstance: {fileID: 458614974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &466288820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466288822}
+  - component: {fileID: 466288821}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &466288821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466288820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  spawnRadius: 20
+  spawnDelay: 0.2
+  playerTransform: {fileID: 1464071637}
+--- !u!4 &466288822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466288820}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23, y: -0.5, z: 0.15110302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1203811599}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &473261203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +2037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &473261204
 Transform:
   m_ObjectHideFlags: 0
@@ -1925,8 +2045,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473261203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8876805, y: -3.8485456, z: -0.20192485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.12768, y: -21.008545, z: -0.19721086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1942,8 +2062,8 @@ Transform:
   - {fileID: 1509841099}
   - {fileID: 735496018}
   - {fileID: 1295457825}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1028646550}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481184239
 GameObject:
@@ -2168,7 +2288,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.620699
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3036,8 +3156,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -3094,7 +3218,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -3189,6 +3313,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &792902887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792902888}
+  - component: {fileID: 792902889}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &792902888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792902887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.3, y: -32.1, z: 0.15110302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1203811599}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792902889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792902887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  spawnRadius: 20
+  spawnDelay: 0.2
+  playerTransform: {fileID: 1464071637}
 --- !u!4 &818471135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5576851527620624283, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
@@ -4138,7 +4310,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1464071637}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 18.620699
+    OrthographicSize: 20
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4572,53 +4744,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1009760656
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1009760658}
-  - component: {fileID: 1009760657}
-  m_Layer: 0
-  m_Name: CoinManagement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1009760657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009760656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde86db77935e3f48bb027dacd271c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCoins: 0
-  gwinyaPrice: 3
-  gwinyaAmount: 0
---- !u!4 &1009760658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009760656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1010521984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4627,8 +4752,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -4685,7 +4814,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -4729,8 +4858,9 @@ Transform:
   - {fileID: 878159751}
   - {fileID: 1105957986}
   - {fileID: 2104386734}
+  - {fileID: 473261204}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032485414
 GameObject:
@@ -5261,8 +5391,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -5319,7 +5453,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -5569,6 +5703,41 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1203811597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203811599}
+  m_Layer: 0
+  m_Name: EnemySpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203811599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203811597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.592053, y: 5.1, z: 6.5996275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 466288822}
+  - {fileID: 792902888}
+  - {fileID: 97908798}
+  - {fileID: 1249558859}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207553458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,6 +5822,54 @@ Transform:
   m_Father: {fileID: 342590850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1249558858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249558859}
+  - component: {fileID: 1249558860}
+  m_Layer: 0
+  m_Name: SpawnPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249558859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249558858}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.4, y: -26, z: 0.15110302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1203811599}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249558860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249558858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dab1ef2cfa11a40a2e522cf22e416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5576851527620624287, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+  spawnRadius: 20
+  spawnDelay: 0.2
+  playerTransform: {fileID: 1464071637}
 --- !u!1 &1257144822
 GameObject:
   m_ObjectHideFlags: 0
@@ -6162,8 +6379,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -6220,7 +6441,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -6875,8 +7096,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: lockOnRange
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
@@ -6933,7 +7158,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: pinkyDeathVFX
       value: 
@@ -7017,6 +7242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickMovement: {fileID: 1490736142}
   playerSpeed: 10
+  healthScript: {fileID: 0}
   health: 100
   maxhealth: 100
   playerGun: {fileID: 1877403036}
@@ -7066,7 +7292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxhealth: 100
-  coinManager: {fileID: 1009760657}
+  coinManager: {fileID: 0}
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
 --- !u!212 &1464071642
 SpriteRenderer:
@@ -7120,150 +7346,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1468922628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1468922633}
-  - component: {fileID: 1468922632}
-  - component: {fileID: 1468922631}
-  - component: {fileID: 1468922630}
-  - component: {fileID: 1468922629}
-  m_Layer: 0
-  m_Name: Enemy_Tokoloshe (1)
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!61 &1468922629
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468922628}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1468922630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468922628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2019645b3ffed7458cc9bc174313eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
-  maxhealth: 100
-  coinManager: {fileID: 0}
-  pinkyDeathVFX: {fileID: 0}
---- !u!114 &1468922631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468922628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4acc99a14a6d4ed459be24bba8b2cb10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  speed: 5
-  lockOnRange: 10
---- !u!212 &1468922632
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468922628}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1468922633
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468922628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.91, y: -0.95, z: 0}
-  m_LocalScale: {x: 3.1531, y: 2.9537, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471703469
 GameObject:
   m_ObjectHideFlags: 0
@@ -10285,6 +10367,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1938383124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938383126}
+  - component: {fileID: 1938383125}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1938383125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938383124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde86db77935e3f48bb027dacd271c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCoins: 0
+  gwinyaPrice: 3
+  gwinyaAmount: 0
+--- !u!4 &1938383126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938383124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.152111, y: -1.5871044, z: 6.7507305}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1947288263
 GameObject:
   m_ObjectHideFlags: 0
@@ -10910,6 +11039,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 473261204}
     m_Modifications:
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576851527620624280, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
+      propertyPath: lockOnRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624283, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10961,7 +11098,7 @@ PrefabInstance:
     - target: {fileID: 5576851527620624292, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: coinManager
       value: 
-      objectReference: {fileID: 1009760657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5576851527620624293, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
       propertyPath: m_IsTrigger
       value: 1

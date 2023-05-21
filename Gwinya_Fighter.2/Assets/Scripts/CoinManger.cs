@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CoinManger : MonoBehaviour
@@ -21,7 +22,6 @@ public class CoinManger : MonoBehaviour
 
             Debug.Log("Item purchased!");
             Debug.Log(gwinyaAmount);
-
         }
         else
         {
@@ -35,6 +35,14 @@ public class CoinManger : MonoBehaviour
         playerCoins += coinsToAdd;
         Debug.Log(playerCoins);
         BuyItem();
+    }
+
+    private void Update()
+    {
+        if(gwinyaAmount == 3)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
 

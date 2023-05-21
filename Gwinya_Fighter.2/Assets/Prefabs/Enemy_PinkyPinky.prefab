@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  speed: 5
+  speed: 8
   lockOnRange: 15
   bulletPrefab: {fileID: 6973146030779480898, guid: b9f6aecbed355554193994112832aa24, type: 3}
   bulletSpeed: 10
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   maxhealth: 100
-  coinManager: {fileID: 0}
+  coinManager: {fileID: 8596952096917524361, guid: 683b01f3c1db1114dbb31e3033f79150, type: 3}
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
 --- !u!61 &5576851527620624293
 BoxCollider2D:
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.019393086, y: 0.18439353}

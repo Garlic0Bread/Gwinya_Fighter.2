@@ -23,10 +23,10 @@ public class Enemy : MonoBehaviour
         if (player.Length > 0)
         {
             // Find the closest enemy
-            Transform closestEnemy = GetClosestPlayer(player);
+            Transform closestPlayer = GetClosestPlayer(player);
 
             // Check if the closest enemy is within lock-on range
-            if (Vector3.Distance(transform.position, closestEnemy.position) <= lockOnRange)
+            if (Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange)
             {
                 Swarm();
             }
