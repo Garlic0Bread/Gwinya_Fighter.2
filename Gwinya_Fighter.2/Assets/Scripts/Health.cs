@@ -6,6 +6,10 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     [SerializeField] private int maxhealth = 100;
+    [SerializeField] private CoinManger coinManager;
+    [SerializeField] private GameObject pinkyDeathVFX;
+    private GameObject deathPrefab;
+
 
     public void Damage(int amount)
     {
@@ -46,8 +50,13 @@ public class Health : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        if (this.CompareTag("Enemy"))
+        {
+            coinManager.AddCoins(1);
+            Instantiate(pinkyDeathVFX, transform.position, Quaternion.identity);
+        }
     }
-
+ 
     private IEnumerator visualIndicator (Color color)
     {
         GetComponent<SpriteRenderer>().color = color;

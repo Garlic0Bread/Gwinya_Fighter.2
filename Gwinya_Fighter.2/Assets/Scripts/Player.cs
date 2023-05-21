@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Transform playerGun; // Reference to the player's gun transform
     [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
+    [SerializeField] private GameObject pinkyDeathPrefab; 
     [SerializeField] private float bulletSpeed = 10f; // Speed of the bullet
     [SerializeField] private float lockOnRange = 10f; // Range within which enemies can be locked onto
     [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
