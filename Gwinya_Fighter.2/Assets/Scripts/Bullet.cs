@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int damage = 3;
     [SerializeField] private float followSpeed;
     [SerializeField] private Collider2D colliderToIgnore;
+    [SerializeField] private GameObject explosionPrefab; 
     private GameObject player;
     private GameObject enemy;
 
@@ -16,6 +17,7 @@ public class Bullet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("PlayerFeet");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
+
     private void Update()
     {
         if (this.gameObject.CompareTag("EnemyBullet"))
@@ -33,9 +35,10 @@ public class Bullet : MonoBehaviour
         }
         Destroy(gameObject, 1.5f);
     }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.GetComponent<Health>() != null)
+        if (collider.GetComponent<Health>() != null)
         {
             if (this.gameObject.CompareTag("EnemyBullet") && collider.CompareTag("Enemy"))
             {
@@ -45,20 +48,31 @@ public class Bullet : MonoBehaviour
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
-                Destroy(gameObject);
+                DestroyBullet();
             }
             else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy"))
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
-                Destroy(gameObject);
+                DestroyBullet();
             }
-            else if(this.gameObject.CompareTag("PharaBullet") && collider.CompareTag("Enemy"))
+            else if (this.gameObject.CompareTag("PharaBullet") && collider.CompareTag("Enemy"))
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
-                Destroy(gameObject);
+                DestroyBullet();
             }
         }
+    }
+
+    private void DestroyBullet()
+    {
+        
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 }
