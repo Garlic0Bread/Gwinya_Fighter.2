@@ -4,16 +4,29 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Shop
+  - Enemy
+  - Tokoloshi
+  - Pinky-Pinky
+  - EnemyBullet
+  - PlayerBullet
+  - PlayerFeet
+  - Gwinya_Tokolosh
+  - Gwinya_PinkyPinky
+  - Phara
+  - Pharas
+  - PharaBullet
+  - RecoverHealth
+  - IncreaseSpeed
+  - Shield
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tokoloshi
   - Water
   - UI
-  - 
+  - Pinky-Pinky
   - 
   - 
   - 

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452629634565780450}
-  m_Layer: 0
-  m_Name: Weapon
+  m_Layer: 6
+  m_Name: bulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373920676150770049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.566, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5576851527620624292}
   - component: {fileID: 5576851527620624293}
   - component: {fileID: -7674878898674999059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_PinkyPinky
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -134,13 +134,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   speed: 8
-  lockOnRange: 15
-  bulletPrefab: {fileID: 6973146030779480898, guid: b9f6aecbed355554193994112832aa24, type: 3}
-  bulletSpeed: 10
-  fireRate: 0.5
-  playerGun: {fileID: 452629634565780450}
+  fireRate: 1
   nextFireTime: 0
-  player: {fileID: 5061156895808532483, guid: 97d1f8ab2933cbb478fa3a1fa50cd692, type: 3}
+  lockOnRange: 15
+  bulletSpeed: 7
+  enemyBullet: {fileID: 5278085183988994765, guid: 0c62315e9f9d58245a52e8eedc89b219, type: 3}
+  bulletSpawnPoint: {fileID: 452629634565780450}
+  shootingCooldown: 2
 --- !u!114 &5576851527620624292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,10 +153,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2019645b3ffed7458cc9bc174313eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 50
   maxhealth: 100
-  coinManager: {fileID: 8596952096917524361, guid: 683b01f3c1db1114dbb31e3033f79150, type: 3}
+  expToGive: 100
+  tokolosh_Exp: 10
+  pinky_Exp: 15
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
+  Gwinya: {fileID: 7765756363614899524, guid: 7e092f0324ec6c5479e2bf8bd3e96403, type: 3}
+  healthBar: {fileID: 0}
 --- !u!61 &5576851527620624293
 BoxCollider2D:
   m_ObjectHideFlags: 0

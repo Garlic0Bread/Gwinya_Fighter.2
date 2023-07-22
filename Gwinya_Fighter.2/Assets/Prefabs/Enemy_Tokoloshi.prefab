@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118412771368106965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6218056677757532051}
   - component: {fileID: 6218056677757532050}
   - component: {fileID: 1032264664408762586}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy_Tokoloshi
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -133,8 +133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 8
+  speed: 6
+  fireRate: 0.5
+  nextFireTime: 0
   lockOnRange: 15
+  bulletSpeed: 1.5
+  enemyBullet: {fileID: 0}
+  bulletSpawnPoint: {fileID: 0}
+  shootingCooldown: 2
 --- !u!114 &6218056677757532051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +155,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   maxhealth: 100
+  expToGive: 5
+  tokolosh_Exp: 10
+  pinky_Exp: 15
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
+  Gwinya: {fileID: 7765756363614899524, guid: 7e092f0324ec6c5479e2bf8bd3e96403, type: 3}
   healthBar: {fileID: 0}
 --- !u!61 &6218056677757532050
 BoxCollider2D:

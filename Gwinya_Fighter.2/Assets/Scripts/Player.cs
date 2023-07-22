@@ -1,49 +1,107 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
-
-    [SerializeField] private Joystick_Movement joystickMovement;
-    [SerializeField] private float playerSpeed;
-
-    [SerializeField] private Transform playerGun; // Reference to the player's gun transform
-    [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
+    [SerializeField] private float playerOriginalSpeed;
     [SerializeField] private float bulletSpeed = 10f; // Speed of the bullet
     [SerializeField] private float lockOnRange = 10f; // Range within which enemies can be locked onto
     [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
+    [SerializeField] private float nextFireTime; // Time of the next allowed fire
+    [SerializeField] private float playerSpeed;
+
+    [SerializeField] private Joystick_Movement joystickMovement;
+    [SerializeField] private Transform playerGun; // Reference to the player's gun transform
+
+    [SerializeField] private GameObject enableShield;
     [SerializeField] private GameObject gamePlayCanvas;
     [SerializeField] private GameObject gameShopCanvas;
+    [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
+    [SerializeField] private GameObject phara1;
 
-    private bool isShopOpen = false;
-    
+    private Rigidbody2D rb;
+    public bool pharas_Active;
 
-    [SerializeField] private float nextFireTime; // Time of the next allowed fire
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSpeed = playerOriginalSpeed;
+        enableShield.SetActive(false);
+        phara1.SetActive(false);
     }
 
-    private void OpenGamePlayCanvas()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        gamePlayCanvas.SetActive(true);
-        gameShopCanvas.SetActive(false);
+        CoinManger coin = FindObjectOfType<CoinManger>();
+        if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 6)
+        {
+            StartCoroutine(ActivatePharaGroup());
 
-        Time.timeScale = 1f; //resumes gameplay
-        isShopOpen = true;
+            SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
+        }
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            StartCoroutine(EnableShield());
+            Destroy(collision.gameObject);
+        }
     }
 
-    private void OpenGameStoreCanvas()
+    IEnumerator ActivatePharaGroup()
     {
-        gamePlayCanvas.SetActive(false);
-        gameShopCanvas.SetActive(true);
+        phara1.SetActive(true);
+        yield return new WaitForSeconds(2);
+        pharas_Active = true;
+    }
+    
+    Transform GetClosestEnemy(GameObject[] enemies)
+    {
+        Transform closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
 
-        Time.timeScale = 0f;
-        isShopOpen = false;
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestEnemy = enemy.transform;
+            }
+        }
+
+        return closestEnemy;
+    }
+
+    IEnumerator tempSpeedBoost()
+    {
+        playerSpeed = playerSpeed * 2;
+        yield return new WaitForSeconds(8);
+        playerSpeed = playerOriginalSpeed;
+    }
+
+    IEnumerator EnableShield()
+    {
+        enableShield.SetActive(true);
+        yield return new WaitForSeconds(10);
+        enableShield.SetActive(false);
+    }
+    
+    public void SpeedBoost()
+    {
+        StartCoroutine(tempSpeedBoost());
+    }
+
+    void FireBullet()
+    {
+        // Instantiate a bullet prefab at the player's gun position and rotation
+        GameObject bullet = Instantiate(bulletPrefab, playerGun.position, Quaternion.identity);
+
+        // Apply velocity to the bullet in the forward direction of the gun
+        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        bulletRigidbody.velocity = playerGun.forward * bulletSpeed;
     }
 
     void Update()
@@ -78,35 +136,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    Transform GetClosestEnemy(GameObject[] enemies)
-    {
-        Transform closestEnemy = null;
-        float closestDistance = Mathf.Infinity;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distance = Vector3.Distance(transform.position, enemy.transform.position);
-
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestEnemy = enemy.transform;
-            }
-        }
-
-        return closestEnemy;
-    }
-
-    void FireBullet()
-    {
-        // Instantiate a bullet prefab at the player's gun position and rotation
-        GameObject bullet = Instantiate(bulletPrefab, playerGun.position, Quaternion.identity);
-
-        // Apply velocity to the bullet in the forward direction of the gun
-        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-        bulletRigidbody.velocity = playerGun.forward * bulletSpeed;
-    }
-
     void FixedUpdate()
     {
         if (joystickMovement.joystickVector.y != 0)
@@ -118,19 +147,5 @@ public class Player : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Shop"))
-        {
-            OpenGameStoreCanvas();
-            Debug.Log("Shop Working");
-        }
-    }
-
-     void OnCollisionExit2D(Collision2D collision)
-    {
-        
     }
 }

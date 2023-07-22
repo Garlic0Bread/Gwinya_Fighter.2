@@ -6,9 +6,16 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int damage = 5;
     [SerializeField] private float speed = 1.5f;
-
+    [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
+    [SerializeField] private float nextFireTime; // Time of the next allowed fire
     [SerializeField] private float lockOnRange = 10f; // Range within which player can be locked onto
+    [SerializeField] private float bulletSpeed = 1.5f;
 
+    [SerializeField] private GameObject enemyBullet;
+    [SerializeField] private Transform bulletSpawnPoint;
+
+    [SerializeField] private float shootingCooldown = 2f;
+    private float lastShootTime;
     private GameObject player;
 
     private void Start()
@@ -26,13 +33,23 @@ public class Enemy : MonoBehaviour
             Transform closestPlayer = GetClosestPlayer(player);
 
             // Check if the closest enemy is within lock-on range
-            if (Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange)
+            if (gameObject.layer == 3 && Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange) //tokolishi layer
             {
                 Swarm();
             }
+
+            else if (gameObject.layer == 6 && Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange) //pinky pinky layer
+            {
+                
+                if (Time.time >= nextFireTime)
+                {
+                    ShootPlayer();
+                    nextFireTime = Time.time + fireRate;
+                }
+            }
         }
     }
-
+    
     Transform GetClosestPlayer(GameObject[] players)
     {
         Transform closestEnemy = null;
@@ -52,14 +69,20 @@ public class Enemy : MonoBehaviour
         return closestEnemy;
     }
 
+    private void ShootPlayer()
+    {
+        GameObject bullet = Instantiate(enemyBullet, bulletSpawnPoint.position, Quaternion.identity);
+        Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
+        bulletRB.velocity = bulletSpawnPoint.up * bulletSpeed;
+    }
     private void Swarm()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
-    private void stopMoving()
+    public void IncreaseSpeed(float increaseBy)
     {
-        transform.position = new Vector2(0, 0);
+        speed = speed + increaseBy;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
