@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 6753302225811975372}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.44, y: 2.055, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   damage: 1
   followSpeed: 0
   colliderToIgnore: {fileID: 6352914880886400806, guid: 14400d6f11fa41840a9be5371b00b67e, type: 3}
+  explosionPrefab: {fileID: 0}
 --- !u!50 &-8248389859984658498
 Rigidbody2D:
   serializedVersion: 4

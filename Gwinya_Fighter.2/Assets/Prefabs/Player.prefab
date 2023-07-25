@@ -247,7 +247,6 @@ MonoBehaviour:
   lockOnRange: 10
   fireRate: 0.5
   nextFireTime: 0
-  testing: 0
 --- !u!61 &305853653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -393,7 +392,6 @@ MonoBehaviour:
   lockOnRange: 10
   fireRate: 0.5
   nextFireTime: 0
-  testing: 0
 --- !u!1 &3643421336807593350
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,11 +739,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOriginalSpeed: 10
-  bulletSpeed: 13
-  lockOnRange: 15
+  bulletSpeed: 16
+  lockOnRange: 20
   fireRate: 0.3
   nextFireTime: 0
-  playerSpeed: 13
+  playerSpeed: 11.5
   joystickMovement: {fileID: 0}
   playerGun: {fileID: 6352914881551005538}
   enableShield: {fileID: 5547613281170125619}
@@ -753,10 +751,7 @@ MonoBehaviour:
   gameShopCanvas: {fileID: 0}
   bulletPrefab: {fileID: 6753302225811975372, guid: 4e81b2a431ee77842a2ed521faffbcee, type: 3}
   phara1: {fileID: 2764962642508409928}
-  phara2: {fileID: 8619291549406720531}
-  phara3: {fileID: 3151772489155709976}
-  phara_1Set: 0
-  phara_2Set: 0
+  pharas_Active: 0
 --- !u!212 &6352914880886400804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1045,4 +1040,3 @@ MonoBehaviour:
   lockOnRange: 10
   fireRate: 0.5
   nextFireTime: 0
-  testing: 0

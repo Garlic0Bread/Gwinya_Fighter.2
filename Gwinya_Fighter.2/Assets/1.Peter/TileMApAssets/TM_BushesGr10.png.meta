@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 420
+  spritePixelsToUnits: 180
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,7 +139,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TM_BushesGr10_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 585
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c7dadc2a2631b4890a61a00949953c
+      internalID: 57109321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 585
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e983e39bbbcd3d499f6433c5d4436e3
+      internalID: -22083941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 585
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26adf3d254b8e3449d25ecc7b0ba623
+      internalID: -1272141218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_3
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 585
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca14b9bfbf968d47b6642cd67fd5613
+      internalID: 90813681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 405
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b14bdfed7d2abd4d80c296ccd91a4dd
+      internalID: 528640032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_5
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 405
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0a15fbf595afe4895da2107b6e1242
+      internalID: 955386119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 405
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0a168de6a9d5c4c980c8c5b5901e36
+      internalID: -1412581532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_7
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 405
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8fdf7f0c1a60f4a906cbb9356faf9e
+      internalID: 726662574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 225
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e21e57590cccc44a9bdc34d43ce9c3
+      internalID: 867449278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 225
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89be46c20653be045b99d2cb50f37277
+      internalID: 1409613932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_10
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 225
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f511cb75232978546b7e57036d42f190
+      internalID: 313981513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 45
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c21cc1ce7626244b12fdd442d7f5cf
+      internalID: 170027429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TM_BushesGr10_12
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 45
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04604fd27017f94997c7c8a945f40cf
+      internalID: -71231652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +423,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TM_BushesGr10_0: 57109321
+      TM_BushesGr10_1: -22083941
+      TM_BushesGr10_10: 313981513
+      TM_BushesGr10_11: 170027429
+      TM_BushesGr10_12: -71231652
+      TM_BushesGr10_2: -1272141218
+      TM_BushesGr10_3: 90813681
+      TM_BushesGr10_4: 528640032
+      TM_BushesGr10_5: 955386119
+      TM_BushesGr10_6: -1412581532
+      TM_BushesGr10_7: 726662574
+      TM_BushesGr10_8: 867449278
+      TM_BushesGr10_9: 1409613932
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

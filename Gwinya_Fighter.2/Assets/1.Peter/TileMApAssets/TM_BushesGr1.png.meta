@@ -144,8 +144,8 @@ TextureImporter:
       name: TM_BushesGr1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 560
+        x: 53
+        y: 528
         width: 240
         height: 240
       alignment: 0
@@ -165,8 +165,8 @@ TextureImporter:
       name: TM_BushesGr1_1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 560
+        x: 293
+        y: 528
         width: 240
         height: 240
       alignment: 0
@@ -186,8 +186,8 @@ TextureImporter:
       name: TM_BushesGr1_2
       rect:
         serializedVersion: 2
-        x: 480
-        y: 560
+        x: 533
+        y: 528
         width: 240
         height: 240
       alignment: 0
@@ -207,8 +207,8 @@ TextureImporter:
       name: TM_BushesGr1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 53
+        y: 288
         width: 240
         height: 240
       alignment: 0
@@ -228,8 +228,8 @@ TextureImporter:
       name: TM_BushesGr1_4
       rect:
         serializedVersion: 2
-        x: 240
-        y: 320
+        x: 293
+        y: 288
         width: 240
         height: 240
       alignment: 0
@@ -249,8 +249,8 @@ TextureImporter:
       name: TM_BushesGr1_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 320
+        x: 533
+        y: 288
         width: 240
         height: 240
       alignment: 0
@@ -270,8 +270,8 @@ TextureImporter:
       name: TM_BushesGr1_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 53
+        y: 48
         width: 240
         height: 240
       alignment: 0
@@ -291,8 +291,8 @@ TextureImporter:
       name: TM_BushesGr1_7
       rect:
         serializedVersion: 2
-        x: 240
-        y: 80
+        x: 293
+        y: 48
         width: 240
         height: 240
       alignment: 0
@@ -312,8 +312,8 @@ TextureImporter:
       name: TM_BushesGr1_8
       rect:
         serializedVersion: 2
-        x: 480
-        y: 80
+        x: 533
+        y: 48
         width: 240
         height: 240
       alignment: 0
