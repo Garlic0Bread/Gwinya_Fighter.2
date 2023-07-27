@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class AbilityManager : MonoBehaviour
 {
+    [SerializeField] private Transform summonPoint;
+    [SerializeField] private GameObject disableStore;
+    [SerializeField] private GameObject ibuthoPrefab;
+    [SerializeField] private GameObject defensePrefab;
+
+    private void Start()
+    {
+    }
     private void Update()
     {
         Player player = FindObjectOfType<Player>();
