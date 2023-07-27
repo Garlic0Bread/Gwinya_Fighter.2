@@ -14,8 +14,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject enemyBullet;
     [SerializeField] private Transform bulletSpawnPoint;
 
-    [SerializeField] private float shootingCooldown = 2f;
-    private float lastShootTime;
     private GameObject player;
 
     private void Start()

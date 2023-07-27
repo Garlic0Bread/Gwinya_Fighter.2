@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         CoinManger coin = FindObjectOfType<CoinManger>();
-        if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 6)
+        if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 4)
         {
             StartCoroutine(ActivatePharaGroup());
 

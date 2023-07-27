@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class AbilityManager : MonoBehaviour
 {
-    [SerializeField] private Transform summonPoint;
-    [SerializeField] private GameObject disableStore;
-    [SerializeField] private GameObject ibuthoPrefab;
-    [SerializeField] private GameObject defensePrefab;
-
-    private void Start()
-    {
-    }
     private void Update()
     {
         Player player = FindObjectOfType<Player>();
@@ -21,7 +13,6 @@ public class AbilityManager : MonoBehaviour
         {
             foreach(GameObject phara in pharas)
             {
-                print("working");
                 phara.SetActive(false);
             }
             player.pharas_Active = false;

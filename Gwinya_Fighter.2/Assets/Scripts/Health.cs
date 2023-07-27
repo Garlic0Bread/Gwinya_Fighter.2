@@ -8,14 +8,12 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     [SerializeField] private int maxhealth = 100;
-    [SerializeField] private float expToGive = 100;
     [SerializeField] private int tokolosh_Exp;
     [SerializeField] private int pinky_Exp;
 
     [SerializeField] private GameObject pinkyDeathVFX;
     [SerializeField] private GameObject Gwinya;
     [SerializeField] private Image healthBar;
-    [SerializeField] private SpriteRenderer playerRenderer;
 
     private void Update()
     {
@@ -107,8 +105,8 @@ public class Health : MonoBehaviour
     }
     private IEnumerator visualIndicator (Color color)
     {
-        playerRenderer.color = color;
+        GetComponentInChildren<SpriteRenderer>().color = color;
         yield return new WaitForSeconds(0.15f);
-        playerRenderer.color = Color.white;
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 }

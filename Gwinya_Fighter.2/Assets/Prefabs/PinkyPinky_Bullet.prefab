@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
-  followSpeed: 2.5
+  followSpeed: 3
   colliderToIgnore: {fileID: 5576851527620624293, guid: 5e66d027e76eb7e459f02df823846673, type: 3}
   explosionPrefab: {fileID: 0}
 --- !u!58 &-587750685806579075

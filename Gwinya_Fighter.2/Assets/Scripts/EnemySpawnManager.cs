@@ -6,7 +6,7 @@ public class EnemySpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;       // The enemy prefab to spawn
     [SerializeField] private GameObject summonCirclePrefab;
-    [SerializeField] private float spawnRadius = 10f;      // The radius within which the player triggers enemy spawn
+    [SerializeField] private float spawnRadius;      // The radius within which the player triggers enemy spawn
     [SerializeField] private float spawnDelay = 5f;        // The delay between enemy spawns
     [SerializeField] private float waitForPlayer = 5f;        // wait for player to move away before spawning again
     [SerializeField] private Transform playerTransform;    // The player's transform
