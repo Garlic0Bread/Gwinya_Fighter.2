@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform playerGun; // Reference to the player's gun transform
 
     [SerializeField] private GameObject enableShield;
-    [SerializeField] private GameObject gamePlayCanvas;
-    [SerializeField] private GameObject gameShopCanvas;
     [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
     [SerializeField] private GameObject phara1;
     [SerializeField] private Animator animator;
@@ -36,7 +34,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         CoinManger coin = FindObjectOfType<CoinManger>();
-        if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 6)
+        if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 4)
         {
             StartCoroutine(ActivatePharaGroup());
 

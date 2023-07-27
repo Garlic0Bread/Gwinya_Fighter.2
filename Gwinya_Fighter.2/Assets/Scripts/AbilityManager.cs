@@ -21,7 +21,6 @@ public class AbilityManager : MonoBehaviour
         {
             foreach(GameObject phara in pharas)
             {
-                print("working");
                 phara.SetActive(false);
             }
             player.pharas_Active = false;
