@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject pinkyDeathVFX;
     [SerializeField] private GameObject Gwinya;
     [SerializeField] private Image healthBar;
+    [SerializeField] private SpriteRenderer playerRenderer;
 
     private void Update()
     {
@@ -106,8 +107,8 @@ public class Health : MonoBehaviour
     }
     private IEnumerator visualIndicator (Color color)
     {
-        GetComponent<SpriteRenderer>().color = color;
+        playerRenderer.color = color;
         yield return new WaitForSeconds(0.15f);
-        GetComponent<SpriteRenderer>().color = Color.white;
+        playerRenderer.color = Color.white;
     }
 }
