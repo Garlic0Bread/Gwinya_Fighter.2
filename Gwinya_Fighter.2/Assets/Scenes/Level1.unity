@@ -488,7 +488,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &284640506 stripped
 Transform:
@@ -85968,11 +85968,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f7c69a35d576764ca665dcd1be44928, type: 3}
---- !u!4 &670101011 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 670101011, guid: 14400d6f11fa41840a9be5371b00b67e, type: 3}
-  m_PrefabInstance: {fileID: 6352914880101946110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &671976570
 GameObject:
   m_ObjectHideFlags: 0
@@ -87523,7 +87518,7 @@ RectTransform:
   - {fileID: 1464071637}
   - {fileID: 1617645558}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -87542,10 +87537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e912891947a06348b2ab2660dd27d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  summonPoint: {fileID: 670101011}
-  disableStore: {fileID: 87113945}
-  ibuthoPrefab: {fileID: 6040203150740469443, guid: 001b45da2a6fdf1498a16ce3e10000a5, type: 3}
-  defensePrefab: {fileID: 3099372841615353410, guid: b7b6fe1b142684e48a236ba841d35a37, type: 3}
 --- !u!1 &708019402
 GameObject:
   m_ObjectHideFlags: 0
@@ -109085,6 +109076,7 @@ RectTransform:
   - {fileID: 413682355}
   - {fileID: 300605266}
   - {fileID: 1490736139}
+  - {fileID: 1826528861}
   m_Father: {fileID: 702625466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -140317,9 +140309,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826528859}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.6, y: 14.8, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -593.69995, y: -948.89996, z: 0}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 613673232}
@@ -140357,8 +140349,8 @@ Transform:
   - {fileID: 1435020051}
   - {fileID: 284640506}
   - {fileID: 374344561}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1617645558}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1866904559 stripped
 Transform:
@@ -140553,7 +140545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1938383127
 MonoBehaviour:
@@ -140567,10 +140559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e912891947a06348b2ab2660dd27d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  summonPoint: {fileID: 670101011}
-  disableStore: {fileID: 87113945}
-  ibuthoPrefab: {fileID: 6040203150740469443, guid: 001b45da2a6fdf1498a16ce3e10000a5, type: 3}
-  defensePrefab: {fileID: 3099372841615353410, guid: b7b6fe1b142684e48a236ba841d35a37, type: 3}
 --- !u!114 &1938383128
 MonoBehaviour:
   m_ObjectHideFlags: 0
