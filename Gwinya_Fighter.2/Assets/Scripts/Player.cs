@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject gameShopCanvas;
     [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
     [SerializeField] private GameObject phara1;
+    [SerializeField] private Animator animator;
 
     private Rigidbody2D rb;
     public bool pharas_Active;
@@ -141,11 +142,13 @@ public class Player : MonoBehaviour
         if (joystickMovement.joystickVector.y != 0)
         {
             rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("canRun", true);
         }
 
         else
         {
             rb.velocity = Vector2.zero;
+            animator.SetBool("canRun", false);
         }
     }
 }

@@ -26,5 +26,9 @@ public class AbilityManager : MonoBehaviour
             }
             player.pharas_Active = false;
         }
+        if(player == null)
+        {
+            print("nada");
+        }
     }
 }
