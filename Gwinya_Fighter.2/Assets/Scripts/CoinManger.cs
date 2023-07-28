@@ -53,12 +53,13 @@ public class CoinManger : MonoBehaviour
     private void Update()
     {
         numCoins.text = PlayerGwinyas.ToString();
-        if(exp == 100)
+        if(exp >= 99)
         {
             print("exp max reached");
             Ability_Spawner spawnItem = FindObjectOfType<Ability_Spawner>();
             spawnItem.Spawn();
-
+            AbilityManager deathSound = FindObjectOfType<AbilityManager>();
+            deathSound.abilitySpawnSound();
             exp = 0;
         }
     }

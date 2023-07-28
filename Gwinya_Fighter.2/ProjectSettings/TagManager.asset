@@ -19,6 +19,7 @@ TagManager:
   - RecoverHealth
   - IncreaseSpeed
   - Shield
+  - SpriteToRend
   layers:
   - Default
   - TransparentFX
