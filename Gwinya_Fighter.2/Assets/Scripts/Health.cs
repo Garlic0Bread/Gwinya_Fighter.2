@@ -13,14 +13,8 @@ public class Health : MonoBehaviour
 
     [SerializeField] private GameObject pinkyDeathVFX;
     [SerializeField] private GameObject Gwinya;
-    private GameObject spriteRender;
     [SerializeField] private Image healthBar;
 
-
-    private void Start()
-    {
-        spriteRender = GameObject.FindGameObjectWithTag("SpriteToRend");
-    }
     private void Update()
     {
         if (this.CompareTag("Player"))
@@ -70,8 +64,6 @@ public class Health : MonoBehaviour
         {
             Instantiate(pinkyDeathVFX, transform.position, Quaternion.identity);
             Instantiate(Gwinya, transform.position, Quaternion.identity);
-            AbilityManager deathSound = FindObjectOfType<AbilityManager>();
-            deathSound.enemyDeathSound();
 
             if (this.gameObject.layer == 3)
             {
@@ -113,17 +105,8 @@ public class Health : MonoBehaviour
     }
     private IEnumerator visualIndicator (Color color)
     {
-        if (this.gameObject.CompareTag("Player"))
-        {
-            spriteRender.GetComponent<SpriteRenderer>().color = color;
-            yield return new WaitForSeconds(0.15f);
-            spriteRender.GetComponent<SpriteRenderer>().color = Color.white;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = color;
-            yield return new WaitForSeconds(0.15f);
-            GetComponent<SpriteRenderer>().color = Color.white;
-        }
+        GetComponentInChildren<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 }

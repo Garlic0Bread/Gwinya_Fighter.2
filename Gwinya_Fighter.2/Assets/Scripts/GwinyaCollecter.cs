@@ -12,9 +12,6 @@ public class GwinyaCollecter : MonoBehaviour
                 addGwinya.AddGwinya(1);
                 Destroy(gameObject);
             }
-
-            AbilityManager deathSound = FindObjectOfType<AbilityManager>();
-            deathSound.gwinyaCollectSound();
         }
     }
 }

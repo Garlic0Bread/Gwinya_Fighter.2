@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform playerGun; // Reference to the player's gun transform
 
     [SerializeField] private GameObject enableShield;
+    [SerializeField] private GameObject gamePlayCanvas;
+    [SerializeField] private GameObject gameShopCanvas;
     [SerializeField] private GameObject bulletPrefab; // Prefab of the bullet to be spawned
     [SerializeField] private GameObject phara1;
     [SerializeField] private Animator animator;
@@ -36,9 +38,10 @@ public class Player : MonoBehaviour
         CoinManger coin = FindObjectOfType<CoinManger>();
         if (collision.gameObject.CompareTag("Pharas") && coin.PlayerGwinyas > 4)
         {
-            coin.PlayerGwinyas = coin.PlayerGwinyas - 5;
-            collision.gameObject.SetActive(false);
             StartCoroutine(ActivatePharaGroup());
+
+            SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
         }
         if (collision.gameObject.CompareTag("Shield"))
         {
@@ -83,8 +86,6 @@ public class Player : MonoBehaviour
     IEnumerator EnableShield()
     {
         enableShield.SetActive(true);
-        AbilityManager deathSound = FindObjectOfType<AbilityManager>();
-        deathSound.shieldActivated();
         yield return new WaitForSeconds(10);
         enableShield.SetActive(false);
     }

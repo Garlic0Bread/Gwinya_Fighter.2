@@ -139,8 +139,8 @@ MonoBehaviour:
   lockOnRange: 15
   bulletSpeed: 7
   enemyBullet: {fileID: 5278085183988994765, guid: 0c62315e9f9d58245a52e8eedc89b219, type: 3}
-  Gwinya: {fileID: 7765756363614899524, guid: a17d236f521ca05479aba324483f008c, type: 3}
   bulletSpawnPoint: {fileID: 452629634565780450}
+  shootingCooldown: 2
 --- !u!114 &5576851527620624292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float bulletSpeed = 1.5f;
 
     [SerializeField] private GameObject enemyBullet;
-    [SerializeField] private GameObject Gwinya;
     [SerializeField] private Transform bulletSpawnPoint;
 
     private GameObject player;
@@ -91,11 +90,6 @@ public class Enemy : MonoBehaviour
             Health health = collider.GetComponent<Health>();
             health.Damage(damage);
             Destroy(gameObject);
-        }
-        else if (collider.gameObject.CompareTag("Shield"))
-        {
-            Destroy(gameObject);
-            Instantiate(Gwinya, transform.position, Quaternion.identity);
         }
     }
 }

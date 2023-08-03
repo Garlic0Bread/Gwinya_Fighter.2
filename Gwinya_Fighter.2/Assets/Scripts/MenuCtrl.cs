@@ -17,9 +17,4 @@ public class MenuCtrl : MonoBehaviour
     {
         Application.Quit ();
     }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
 }
