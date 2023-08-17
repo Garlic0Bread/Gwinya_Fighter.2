@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab; 
     private GameObject player;
     private GameObject enemy;
+    public bool canDamageEnemy;
 
     private void Start()
     {
@@ -50,11 +51,15 @@ public class Bullet : MonoBehaviour
                 health.Damage(damage);
                 DestroyBullet();
             }
-            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy"))
+            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy") && canDamageEnemy == true)
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
                 DestroyBullet();
+            }
+            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy") && canDamageEnemy == false)
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider.gameObject.GetComponent<Collider2D>());
             }
             else if (this.gameObject.CompareTag("PharaBullet") && collider.CompareTag("Enemy"))
             {
