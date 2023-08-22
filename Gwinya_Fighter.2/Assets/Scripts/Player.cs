@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
             StartCoroutine(EnableShield());
             Destroy(collision.gameObject);
         }
-
     }
 
     IEnumerator ActivatePharaGroup()

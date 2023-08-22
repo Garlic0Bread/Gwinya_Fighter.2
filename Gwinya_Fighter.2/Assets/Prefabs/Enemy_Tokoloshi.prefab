@@ -140,6 +140,7 @@ MonoBehaviour:
   bulletSpeed: 1.5
   enemyBullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
+  shootingCooldown: 2
 --- !u!114 &6218056677757532051
 MonoBehaviour:
   m_ObjectHideFlags: 0
