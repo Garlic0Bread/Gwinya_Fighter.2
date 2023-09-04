@@ -15,13 +15,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPoint;
 
     private GameObject player;
-    public bool canBeDamaged = false;
-    private Bullet damageEnemy;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        damageEnemy = GameObject.FindObjectOfType<Bullet>();
     }
 
     private void Update()
@@ -90,33 +87,15 @@ public class Enemy : MonoBehaviour
     {
         if(collider.gameObject.tag == ("Player"))
         {
-
             Health health = collider.GetComponent<Health>();
             health.Damage(damage);
             Destroy(gameObject);
         }
         if (collider.gameObject.tag == ("SafeArea"))
         {
-            print("yeeee");
-            if (damageEnemy != null)
-            {
-                damageEnemy.canDamageEnemy = true;
-            }
-            else
-                return;
+
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == ("SafeArea"))
-        {
-            if (damageEnemy != null)
-            {
-                damageEnemy.canDamageEnemy = false;
-            }
-            else
-                return;
-        }
-    }
+    
 }

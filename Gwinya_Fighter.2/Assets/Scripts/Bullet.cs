@@ -51,16 +51,13 @@ public class Bullet : MonoBehaviour
                 health.Damage(damage);
                 DestroyBullet();
             }
-            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy") && canDamageEnemy == true)
+            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy"))
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
                 DestroyBullet();
             }
-            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy") && canDamageEnemy == false)
-            {
-                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider.gameObject.GetComponent<Collider2D>());
-            }
+            
             else if (this.gameObject.CompareTag("PharaBullet") && collider.CompareTag("Enemy"))
             {
                 Health health = collider.GetComponent<Health>();
