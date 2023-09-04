@@ -11,9 +11,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float lockOnRange = 10f; // Range within which player can be locked onto
     [SerializeField] private float bulletSpeed = 1.5f;
 
+    [SerializeField] private GameObject first_Form;
     [SerializeField] private GameObject enemyBullet;
+    [SerializeField] private GameObject second_Form;
     [SerializeField] private Transform bulletSpawnPoint;
-
+    [SerializeField] private BoxCollider2D boxCollider;
+    
     private GameObject player;
 
     private void Start()
@@ -93,9 +96,21 @@ public class Enemy : MonoBehaviour
         }
         if (collider.gameObject.tag == ("SafeArea"))
         {
-
+            var enemyBoxCollider = this.gameObject.GetComponent<BoxCollider2D>();
+            enemyBoxCollider.gameObject.SetActive(true);
+            first_Form.SetActive(false);
+            second_Form.SetActive(true);
         }
     }
 
-    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == ("SafeArea"))
+        {
+            var enemyBoxCollider = this.gameObject.GetComponent<BoxCollider2D>();
+            enemyBoxCollider.gameObject.SetActive(false);
+            first_Form.SetActive(true);
+            second_Form.SetActive(false);
+        }
+    }
 }
