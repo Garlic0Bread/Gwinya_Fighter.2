@@ -374,10 +374,11 @@ MonoBehaviour:
   lockOnRange: 50
   bulletSpeed: 1.5
   first_Form: {fileID: 305292318027220005}
-  enemyBullet: {fileID: 0}
+  enemyBullet: {fileID: 5278085183988994765, guid: 0c62315e9f9d58245a52e8eedc89b219, type: 3}
   second_Form: {fileID: 4658233449344206070}
-  bulletSpawnPoint: {fileID: 0}
-  boxCollider: {fileID: 0}
+  bulletSpawnPoint: {fileID: 2118412771368106965}
+  boxCollider: {fileID: 6218056677757532050}
+  canShoot: 0
 --- !u!114 &6218056677757532051
 MonoBehaviour:
   m_ObjectHideFlags: 0

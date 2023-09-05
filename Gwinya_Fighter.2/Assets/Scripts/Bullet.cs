@@ -51,30 +51,15 @@ public class Bullet : MonoBehaviour
                 health.Damage(damage);
                 DestroyBullet();
             }
-            else if (this.gameObject.CompareTag("PlayerBullet") && collider.CompareTag("Enemy"))
-            {
-                Health health = collider.GetComponent<Health>();
-                health.Damage(damage);
-                DestroyBullet();
-            }
-            
-            else if (this.gameObject.CompareTag("PharaBullet") && collider.CompareTag("Enemy"))
-            {
-                Health health = collider.GetComponent<Health>();
-                health.Damage(damage);
-                DestroyBullet();
-            }
         }
     }
 
-    private void DestroyBullet()
+    public void DestroyBullet()
     {
-        
         if (explosionPrefab != null)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
-
         Destroy(gameObject);
     }
 }

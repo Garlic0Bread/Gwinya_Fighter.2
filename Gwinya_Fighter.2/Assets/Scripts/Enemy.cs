@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     
     private GameObject player;
+    public bool canBeDamaged = false;
 
     private void Start()
     {
@@ -96,10 +97,21 @@ public class Enemy : MonoBehaviour
         }
         if (collider.gameObject.tag == ("SafeArea"))
         {
-            var enemyBoxCollider = this.gameObject.GetComponent<BoxCollider2D>();
-            enemyBoxCollider.gameObject.SetActive(true);
+            canBeDamaged = true;
             first_Form.SetActive(false);
             second_Form.SetActive(true);
+        }
+        if(collider.gameObject.tag == ("PlayerBullet"))
+        {
+            if (canBeDamaged == true)
+            {
+                print("enemy is here");
+                Health health = GetComponent<Health>();
+                Bullet bullet = FindObjectOfType<Bullet>();
+
+                Destroy(collider.gameObject);
+                health.Damage(damage);
+            }
         }
     }
 
@@ -107,10 +119,16 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == ("SafeArea"))
         {
-            var enemyBoxCollider = this.gameObject.GetComponent<BoxCollider2D>();
-            enemyBoxCollider.gameObject.SetActive(false);
+            canBeDamaged = false;
             first_Form.SetActive(true);
             second_Form.SetActive(false);
+        }
+        if (collision.gameObject.tag == ("Bullet"))
+        {
+            if (canBeDamaged == false)
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.GetComponent<Collider2D>());
+            }
         }
     }
 }
