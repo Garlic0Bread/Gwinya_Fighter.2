@@ -151,5 +151,35 @@ public class Player : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.SetBool("canRun", false);
         }
+
+        if (joystickMovement.joystickVector.x > 0)
+        {
+                rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+                animator.SetBool("rightRun", true);
+
+        }
+
+       else if (joystickMovement.joystickVector.x <= 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("rightRun", false);
+
+        }
+
+
+        if (joystickMovement.joystickVector.x < 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("leftRun", true);
+
+        }
+
+        else if (joystickMovement.joystickVector.x >= 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("leftRun", false);
+
+        }
+
     }
 }
