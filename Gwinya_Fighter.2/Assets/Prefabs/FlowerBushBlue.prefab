@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -47
+  m_SortingOrder: -59
   m_Sprite: {fileID: 21300000, guid: a9deee62f58268648a520f4b4e9e3dfb, type: 3}
   m_Color: {r: 0.13725491, g: 0.7647059, b: 0, a: 1}
   m_FlipX: 0
@@ -332,6 +332,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4483830877487650, guid: eb48c100f69d14694acfb96a9020ccdf, type: 3}
   m_PrefabInstance: {fileID: 984054850007329303}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &985940844098795453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921213096091050, guid: eb48c100f69d14694acfb96a9020ccdf, type: 3}
+  m_PrefabInstance: {fileID: 984054850007329303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!210 &5370165294704567057
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985940844098795453}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -58
 --- !u!1001 &984054850263286890
 PrefabInstance:
   m_ObjectHideFlags: 0
