@@ -32,7 +32,7 @@ public class Joystick_Movement : MonoBehaviour
         Vector2 dragPos = pointerEventData.position;
         joystickVector = (dragPos - joystickTouchPos).normalized;
 
-        float joystickDistance = (dragPos - joystickTouchPos).sqrMagnitude;
+        float joystickDistance = Vector2.Distance(dragPos, joystickTouchPos);
 
         if(joystickDistance < joystickRadius)
         {

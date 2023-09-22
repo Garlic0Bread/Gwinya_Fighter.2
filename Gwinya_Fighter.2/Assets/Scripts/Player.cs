@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float fireRate = 0.5f; // Rate of fire (in seconds)
     [SerializeField] private float nextFireTime; // Time of the next allowed fire
     [SerializeField] private float playerSpeed;
-    [SerializeField] private float horizontal;
-    [SerializeField] private float vertical;
 
     [SerializeField] private Joystick_Movement joystickMovement;
     [SerializeField] private Transform playerGun; // Reference to the player's gun transform
@@ -26,111 +24,13 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     public bool pharas_Active;
-    public bool shieldOn;
-    public Collider2D playerCollider;
-    public Collider2D shieldCollider;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         playerSpeed = playerOriginalSpeed;
         enableShield.SetActive(false);
         phara1.SetActive(false);
-    }
-    void Update()
-    {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-
-        // Find all enemy game objects within lock-on range
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        // Check if there are any enemies in range
-        if (enemies.Length > 0)
-        {
-            // Find the closest enemy
-            Transform closestEnemy = GetClosestEnemy(enemies);
-
-            // Check if the closest enemy is within lock-on range
-            if (Vector3.Distance(transform.position, closestEnemy.position) <= lockOnRange)
-            {
-                // Rotate the player's gun to face the closest enemy
-                Vector3 targetDirection = closestEnemy.position - playerGun.position;
-                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                playerGun.rotation = Quaternion.Lerp(playerGun.rotation, targetRotation, Time.deltaTime * 10f);
-
-                // Check if enough time has passed since the last fire
-
-                if (Time.time >= nextFireTime)
-                {
-                    // Fire a bullet
-                    FireBullet();
-                    // Set the time for the next allowed fire
-                    nextFireTime = Time.time + fireRate;
-                }
-            }
-        }
-    }
-    void FixedUpdate()
-    {
-        // Mobile touch screen controls
-        if (joystickMovement.joystickVector.y != 0)
-        {
-            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
-            animator.SetBool("canRun", true);
-        }else
-        {
-            rb.velocity = Vector2.zero;
-            animator.SetBool("canRun", false);
-        }
-
-
-        if (joystickMovement.joystickVector.x > 0.35f) //run to the right
-        {
-            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
-
-            animator.SetBool("rightRun", true);
-        }
-        else if (joystickMovement.joystickVector.x <= 0.35f)
-        {
-            animator.SetBool("rightRun", false);
-        }
-
-
-        if (joystickMovement.joystickVector.x < -0.35f) //run to the left
-        {
-            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
-            animator.SetBool("leftRun", true);
-        }
-        else if (joystickMovement.joystickVector.x >= -0.35f)
-        {
-            animator.SetBool("leftRun", false);
-        }
-
-        //PC Controls
-        if (Input.GetKey(KeyCode.A))
-        {
-            animator.SetBool("leftRun", true);
-            rb.velocity = Vector2.left * playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            animator.SetBool("rightRun", true);
-            rb.velocity = Vector2.right * playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            animator.SetBool("canRun", true);
-            rb.velocity = Vector2.up * playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("canRun", true);
-            rb.velocity = Vector2.down * playerSpeed;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -145,27 +45,10 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Shield"))
         {
-            StartCoroutine(EnableShield(collision));
+            StartCoroutine(EnableShield());
             Destroy(collision.gameObject);
-            shieldOn = true;
         }
 
-        if (collision.gameObject.CompareTag("Enemy") && shieldOn == false)
-        {
-            Health health = GetComponent<Health>();
-            health.Damage(5);
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Enemy") && shieldOn == true)
-        {
-            Destroy(collision.gameObject);
-        }
-        
-        if (collision.gameObject.CompareTag("BossEnemy"))
-        {
-            Health health = GetComponent<Health>();
-            health.Damage(8);
-        }
     }
 
     IEnumerator ActivatePharaGroup()
@@ -201,18 +84,13 @@ public class Player : MonoBehaviour
         playerSpeed = playerOriginalSpeed;
     }
 
-    IEnumerator EnableShield(Collider2D collision)
+    IEnumerator EnableShield()
     {
         enableShield.SetActive(true);
-        shieldCollider.enabled = true;
-        playerCollider.enabled = false;
-        yield return new WaitForSeconds(5);
-        shieldOn = false;
+        yield return new WaitForSeconds(10);
         enableShield.SetActive(false);
-        shieldCollider.enabled = false;
-        playerCollider.enabled = true;
     }
-
+    
     public void SpeedBoost()
     {
         StartCoroutine(tempSpeedBoost());
@@ -228,5 +106,80 @@ public class Player : MonoBehaviour
         bulletRigidbody.velocity = playerGun.forward * bulletSpeed;
     }
 
+    void Update()
+    {
+        // Find all enemy game objects within lock-on range
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+        // Check if there are any enemies in range
+        if (enemies.Length > 0)
+        {
+            // Find the closest enemy
+            Transform closestEnemy = GetClosestEnemy(enemies);
+
+            // Check if the closest enemy is within lock-on range
+            if (Vector3.Distance(transform.position, closestEnemy.position) <= lockOnRange)
+            {
+                // Rotate the player's gun to face the closest enemy
+                Vector3 targetDirection = closestEnemy.position - playerGun.position;
+                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                playerGun.rotation = Quaternion.Lerp(playerGun.rotation, targetRotation, Time.deltaTime * 10f);
+
+                // Check if enough time has passed since the last fire
+
+                if (Time.time >= nextFireTime)
+                {
+                    // Fire a bullet
+                    FireBullet();
+                    // Set the time for the next allowed fire
+                    nextFireTime = Time.time + fireRate;
+                }
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (joystickMovement.joystickVector.y != 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("canRun", true);
+        }
+
+        else
+        {
+            rb.velocity = Vector2.zero;
+            animator.SetBool("canRun", false);
+        }
+
+        if (joystickMovement.joystickVector.x > 0)
+        {
+                rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+                animator.SetBool("rightRun", true);
+
+        }
+
+       else if (joystickMovement.joystickVector.x <= 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("rightRun", false);
+
+        }
+
+
+        if (joystickMovement.joystickVector.x < 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("leftRun", true);
+
+        }
+
+        else if (joystickMovement.joystickVector.x >= 0)
+        {
+            rb.velocity = new Vector2(joystickMovement.joystickVector.x * playerSpeed, joystickMovement.joystickVector.y * playerSpeed);
+            animator.SetBool("leftRun", false);
+
+        }
+
+    }
 }

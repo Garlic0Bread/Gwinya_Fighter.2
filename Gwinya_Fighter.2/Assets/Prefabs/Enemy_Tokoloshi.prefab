@@ -379,7 +379,7 @@ MonoBehaviour:
   second_Form: {fileID: 4658233449344206070}
   bulletSpawnPoint: {fileID: 2118412771368106965}
   boxCollider: {fileID: 6218056677757532050}
-  canBeDamaged: 0
+  canShoot: 0
 --- !u!114 &6218056677757532051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   maxhealth: 100
-  tokolosh_Exp: 20
+  tokolosh_Exp: 10
   pinky_Exp: 15
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
   Gwinya: {fileID: 7765756363614899524, guid: 7e092f0324ec6c5479e2bf8bd3e96403, type: 3}

@@ -55,6 +55,7 @@ public class CoinManger : MonoBehaviour
         numCoins.text = PlayerGwinyas.ToString();
         if(exp == 100)
         {
+            print("exp max reached");
             Ability_Spawner spawnItem = FindObjectOfType<Ability_Spawner>();
             spawnItem.Spawn();
 

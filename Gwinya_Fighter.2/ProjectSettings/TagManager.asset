@@ -20,7 +20,6 @@ TagManager:
   - IncreaseSpeed
   - Shield
   - SafeArea
-  - BossEnemy
   layers:
   - Default
   - TransparentFX
