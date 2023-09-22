@@ -398,7 +398,6 @@ MonoBehaviour:
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
   Gwinya: {fileID: 7765756363614899524, guid: 7e092f0324ec6c5479e2bf8bd3e96403, type: 3}
   healthBar: {fileID: 0}
-  own_sprite: {fileID: 5375745504907731127}
 --- !u!61 &6218056677757532050
 BoxCollider2D:
   m_ObjectHideFlags: 0
