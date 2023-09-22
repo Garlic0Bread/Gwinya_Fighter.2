@@ -35,12 +35,12 @@ public class Enemy : MonoBehaviour
             Transform closestPlayer = GetClosestPlayer(player);
 
             // Check if the closest enemy is within lock-on range
-            if (gameObject.layer == 3 && Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange) //tokolishi layer
+            if (gameObject.layer == 3 && (transform.position - closestPlayer.position).sqrMagnitude <= lockOnRange * lockOnRange) //tokolishi layer
             {
                 Swarm();
             }
 
-            else if (gameObject.layer == 6 && Vector3.Distance(transform.position, closestPlayer.position) <= lockOnRange) //pinky pinky layer
+            else if (gameObject.layer == 6 && (transform.position - closestPlayer.position).sqrMagnitude <= lockOnRange) //pinky pinky layer
             {
                 
                 if (Time.time >= nextFireTime)
@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 
         foreach (GameObject player in players)
         {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
+            float distance = (transform.position - player.transform.position).sqrMagnitude;
 
             if (distance < closestDistance)
             {
@@ -89,23 +89,16 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == ("Player"))
-        {
-            Health health = collider.GetComponent<Health>();
-            health.Damage(damage);
-            Destroy(gameObject);
-        }
-        if (collider.gameObject.tag == ("SafeArea"))
+        if (collider.gameObject.CompareTag("SafeArea"))
         {
             canBeDamaged = true;
             first_Form.SetActive(false);
             second_Form.SetActive(true);
         }
-        if(collider.gameObject.tag == ("PlayerBullet"))
+        if(collider.gameObject.CompareTag("PlayerBullet"))
         {
             if (canBeDamaged == true)
             {
-                print("enemy is here");
                 Health health = GetComponent<Health>();
                 Bullet bullet = FindObjectOfType<Bullet>();
 
@@ -117,13 +110,13 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("SafeArea"))
+        if (collision.gameObject.CompareTag("SafeArea"))
         {
             canBeDamaged = false;
             first_Form.SetActive(true);
             second_Form.SetActive(false);
         }
-        if (collision.gameObject.tag == ("Bullet"))
+        if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             if (canBeDamaged == false)
             {
