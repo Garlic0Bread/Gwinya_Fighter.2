@@ -4840,14 +4840,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -499.9, y: -1050.77, z: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6686878730988255465}
 =======
-=======
->>>>>>> parent of 35b2e2a (Script & Scene changes)
   m_LocalScale: {x: 0.33305997, y: 0.38948, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
