@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 2800000, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288089798394406813}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -511.8, y: -1052.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6218056677757532072, guid: d37bbd3bb4524a1428a39692126e4552, type: 3}
   summonCirclePrefab: {fileID: 2539172427080116234, guid: 92a20d240637ecb4cb00b6c13d23efea, type: 3}
-  spawnRadius: 35
-  spawnDelay: 1
-  waitForPlayer: 0.9
+  spawnRadius: 50
+  spawnDelay: 1.6
+  waitForPlayer: 2
   playerTransform: {fileID: 0}
