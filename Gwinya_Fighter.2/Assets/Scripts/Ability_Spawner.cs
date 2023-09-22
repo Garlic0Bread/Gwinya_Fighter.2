@@ -13,6 +13,11 @@ public class Ability_Spawner : MonoBehaviour
     int randomX;
     GameObject spawnedItem;
 
+    private void Update()
+    {
+        Player player = FindObjectOfType<Player>();
+    }
+
     public void Spawn()
     {
         int randomObjectId = Random.Range(0, ability_items.Length);

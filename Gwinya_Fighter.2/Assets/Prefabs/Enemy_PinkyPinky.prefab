@@ -138,9 +138,12 @@ MonoBehaviour:
   nextFireTime: 0
   lockOnRange: 15
   bulletSpeed: 7
+  first_Form: {fileID: 0}
   enemyBullet: {fileID: 5278085183988994765, guid: 0c62315e9f9d58245a52e8eedc89b219, type: 3}
+  second_Form: {fileID: 0}
   bulletSpawnPoint: {fileID: 452629634565780450}
-  shootingCooldown: 2
+  boxCollider: {fileID: 0}
+  canBeDamaged: 0
 --- !u!114 &5576851527620624292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +163,7 @@ MonoBehaviour:
   pinkyDeathVFX: {fileID: 5342519296982477222, guid: 3c6b101f512494f44b6c5375cc3cf25a, type: 3}
   Gwinya: {fileID: 7765756363614899524, guid: 7e092f0324ec6c5479e2bf8bd3e96403, type: 3}
   healthBar: {fileID: 0}
+  own_sprite: {fileID: 5576851527620624282}
 --- !u!61 &5576851527620624293
 BoxCollider2D:
   m_ObjectHideFlags: 0
